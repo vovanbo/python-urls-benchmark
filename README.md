@@ -47,9 +47,24 @@ $ ./test_performance.py
 
 ## Results
 
-* [Creation of simple URLs](https://vovanbo.github.io/python-urls-benchmark/benchmark-Creation_of_simple_URL.svg)
-* [Creation of non-ASCII URLs](https://vovanbo.github.io/python-urls-benchmark/benchmark-Creation_of_non-ASCII_URL.svg)
-* [Conversion of URL to string](https://vovanbo.github.io/python-urls-benchmark/benchmark-Conversion_of_URL_to_string.svg)
+### Creation of simple URLs
+
+| Library     | OPS (Kops/s)     | Rounds | Iterations |
+|-------------|------------------|--------|------------|
+| [URLObject] | 4,321.5118 (1.0) | 5      | 10000000   |
+| [url-py]    | 791.4472 (0.18)  | 5      | 1000000    |
+| [yarl]      | 48.9380 (0.01)   | 5      | 100000     |
+| [furl]      | 4.2583 (0.00)    | 5      | 10000      |
+
+[Interactive SVG](https://vovanbo.github.io/python-urls-benchmark/benchmark-Creation_of_simple_URL.svg)
+
+### Creation of non-ASCII URLs
+
+[Interactive SVG](https://vovanbo.github.io/python-urls-benchmark/benchmark-Creation_of_non-ASCII_URL.svg)
+
+### Conversion of URL to string
+
+[Interactive SVG](https://vovanbo.github.io/python-urls-benchmark/benchmark-Conversion_of_URL_to_string.svg)
 
 [furl]: https://github.com/gruns/furl
 [yarl]: https://github.com/aio-libs/yarl
