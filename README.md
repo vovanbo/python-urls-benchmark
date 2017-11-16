@@ -35,6 +35,7 @@ warmup_iterations=100000
 
 ```bash
 $ git clone https://github.com/vovanbo/python-urls-benchmark.git
+$ cd python-urls-benchmark
 $ pipenv install
 ```
 
