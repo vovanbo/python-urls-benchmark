@@ -12,6 +12,7 @@ furl = "*"
 URLObject = "*"
 pytest-benchmark = {extras = ["histogram"]}
 url = "*"
+hyperlink = "*"
 
 
 [dev-packages]
