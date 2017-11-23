@@ -6,8 +6,10 @@ Libraries in this benchmark:
 * [yarl]
 * [URLObject]
 * [url-py]
+* [hyperlink]
 
-Also, [purl] library was excluded due to not properly supported Unicode URLs.
+Also, [purl] and [YURL] libraries was excluded due to not properly 
+supported Unicode URLs.
 
 Results was measured with [pytest-benchmark] plugin on the following host:
 
@@ -51,10 +53,11 @@ $ ./test_performance.py
 
 | Library     | OPS (Kops/s)     | Rounds | Iterations |
 |-------------|------------------|:------:|------------|
-| [URLObject] | 4,321.5118 (1.0) |    5   | 10000000   |
-| [url-py]    | 791.4472 (0.18)  |    5   | 1000000    |
-| [yarl]      | 48.9380 (0.01)   |    5   | 100000     |
-| [furl]      | 4.2583 (0.00)    |    5   | 10000      |
+| [URLObject] | 4,639.7060 (1.0) |    5   | 10000000   |
+| [url-py]    | 821.4608 (0.18)  |    5   | 1000000    |
+| [yarl]      | 48.9879 (0.01)   |    5   | 100000     |
+| [hyperlink] | 38.0768 (0.01)   |    5   | 100000     |
+| [furl]      | 4.3951 (0.00)    |    5   | 10000      |
 
 [Interactive SVG](https://vovanbo.github.io/python-urls-benchmark/benchmark-Creation_of_simple_URL.svg)
 
@@ -62,10 +65,11 @@ $ ./test_performance.py
 
 | Library     | OPS (Kops/s)   | Rounds | Iterations |
 |-------------|----------------|:------:|------------|
-| [url-py]    | 712.2774 (1.0) |    5   | 1000000    |
-| [furl]      | 5.8039 (0.01)  |    5   | 10000      |
-| [URLObject] | 4.6441 (0.01)  |    5   | 10000      |
-| [yarl]      | 4.5606 (0.01)  |    5   | 10000      |
+| [url-py]    | 723.1370 (1.0) |    5   | 1000000    |
+| [hyperlink] | 47.9041 (0.07) |    5   | 100000     |
+| [furl]      | 5.7790 (0.01)  |    5   | 10000      |
+| [URLObject] | 4.7849 (0.01)  |    5   | 10000      |
+| [yarl]      | 4.7252 (0.01)  |    5   | 10000      |
 
 [Interactive SVG](https://vovanbo.github.io/python-urls-benchmark/benchmark-Creation_of_non-ASCII_URL.svg)
 
@@ -73,10 +77,11 @@ $ ./test_performance.py
 
 | Library     | OPS (Kops/s)      | Rounds | Iterations |
 |-------------|-------------------|:------:|------------|
-| [URLObject] | 5,927.0871 (1.0)  |    5   | 10000000   |
-| [url-py]    | 1,343.2251 (0.23) |    5   | 1363472    |
-| [yarl]      | 446.4558 (0.08)   |    5   | 1000000    |
-| [furl]      | 2.3551 (0.00)     |    5   | 10000      |
+| [URLObject] | 6,161.5267 (1.0)  |    5   | 10000000   |
+| [url-py]    | 1,366.2313 (0.22) |    5   | 1390781    |
+| [yarl]      | 444.8349 (0.07)   |    5   | 1000000    |
+| [hyperlink] | 4.1737 (0.00)     |    5   | 10000      |
+| [furl]      | 2.3741 (0.00)     |    5   | 10000      |
 
 [Interactive SVG](https://vovanbo.github.io/python-urls-benchmark/benchmark-Conversion_of_URL_to_string.svg)
 
@@ -87,3 +92,5 @@ $ ./test_performance.py
 [purl]: https://github.com/codeinthehole/purl
 [pytest-benchmark]: http://pytest-benchmark.readthedocs.io/en/stable/index.html
 [pipenv]: https://docs.pipenv.org
+[hyperlink]: https://github.com/python-hyper/hyperlink
+[YURL]: https://github.com/homm/yurl
