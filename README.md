@@ -5,18 +5,19 @@ Libraries in this benchmark:
 * [furl]
 * [yarl]
 * [URLObject]
-* [url-py]
 * [hyperlink]
 
+Python version is **3.10.4**.
+
 Also, [purl] and [YURL] libraries was excluded due to not properly 
-supported Unicode URLs.
+supported Unicode URLs. [url-py] was excluded due to no support of Python 3.10.
 
 Results was measured with [pytest-benchmark] plugin on the following host:
 
-* Mac OS Sierra 10.12.6
-* MacBook Pro (Retina, 13-inch, Early 2015)
-* 2,7 GHz Intel Core i5
-* 16 GB 1867 MHz DDR3
+* MacBook Air (M1, 2020)
+* OS: Mac OS Monterey 12.4
+* Chip: Apple M1
+* Memory: 16 GB
 
 [pytest-benchmark] preset:
 
@@ -51,25 +52,23 @@ $ ./test_performance.py
 
 ### Creation of simple URLs
 
-| Library     | OPS (Kops/s)     | Rounds | Iterations |
-|-------------|------------------|:------:|------------|
-| [URLObject] | 4,639.7060 (1.0) |    5   | 10000000   |
-| [url-py]    | 821.4608 (0.18)  |    5   | 1000000    |
-| [yarl]      | 48.9879 (0.01)   |    5   | 100000     |
-| [hyperlink] | 38.0768 (0.01)   |    5   | 100000     |
-| [furl]      | 4.3951 (0.00)    |    5   | 10000      |
+| Library     | OPS (Kops/s)      | Rounds | Iterations |
+|-------------|-------------------|:------:|------------|
+| [URLObject] | 11,634.4655 (1.0) |    5   | 11647268   |
+| [yarl]      | 164.2184 (0.01)   |    5   | 165130     |
+| [hyperlink] | 119.3448 (0.01)   |    5   | 120371     |
+| [furl]      | 11.5602 (0.00)    |    5   | 11701      |
 
 [Interactive SVG](https://vovanbo.github.io/python-urls-benchmark/benchmark-Creation_of_simple_URL.svg)
 
 ### Creation of non-ASCII URLs
 
-| Library     | OPS (Kops/s)   | Rounds | Iterations |
-|-------------|----------------|:------:|------------|
-| [url-py]    | 723.1370 (1.0) |    5   | 1000000    |
-| [hyperlink] | 47.9041 (0.07) |    5   | 100000     |
-| [furl]      | 5.7790 (0.01)  |    5   | 10000      |
-| [URLObject] | 4.7849 (0.01)  |    5   | 10000      |
-| [yarl]      | 4.7252 (0.01)  |    5   | 10000      |
+| Library     | OPS (Kops/s)    | Rounds | Iterations |
+|-------------|-----------------|:------:|------------|
+| [yarl]      | 154.5179 (1.0)  |    5   | 154462     |
+| [hyperlink] | 152.6398 (0.99) |    5   | 153125     |
+| [URLObject] | 15.0344 (0.10)  |    5   | 15023      |
+| [furl]      | 3.8075 (0.02)   |    5   | 10000      |
 
 [Interactive SVG](https://vovanbo.github.io/python-urls-benchmark/benchmark-Creation_of_non-ASCII_URL.svg)
 
@@ -77,11 +76,10 @@ $ ./test_performance.py
 
 | Library     | OPS (Kops/s)      | Rounds | Iterations |
 |-------------|-------------------|:------:|------------|
-| [URLObject] | 6,161.5267 (1.0)  |    5   | 10000000   |
-| [url-py]    | 1,366.2313 (0.22) |    5   | 1390781    |
-| [yarl]      | 444.8349 (0.07)   |    5   | 1000000    |
-| [hyperlink] | 4.1737 (0.00)     |    5   | 10000      |
-| [furl]      | 2.3741 (0.00)     |    5   | 10000      |
+| [URLObject] | 16,166.8971 (1.0) |    5   | 16181124   |
+| [yarl]      | 1,413.2480 (0.09) |    5   | 1408450    |
+| [hyperlink] | 15.2360 (0.00)    |    5   | 15276      |
+| [furl]      | 5.0420 (0.00)     |    5   | 10000      |
 
 [Interactive SVG](https://vovanbo.github.io/python-urls-benchmark/benchmark-Conversion_of_URL_to_string.svg)
 
